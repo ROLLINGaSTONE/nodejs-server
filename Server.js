@@ -5,10 +5,12 @@ const app = express()
 
 app.use(bodyParser.urlencoded({extended: true}))
 
-//server port
-app.listen(3000, function(){
+const port = process.env.PORT || 3000
 
-console.log("server started on port 3000")
+//server port
+app.listen(port, ()=>{
+
+console.log(`your server started at http://localhost${port} `)
 
 
 })
